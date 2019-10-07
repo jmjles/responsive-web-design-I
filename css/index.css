@@ -1,3 +1,298 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+body{
+	width: 70%;
+	margin: 0 auto;
+}
+
+button{
+	padding: 10px 30px;
+	background-color: white;
+	border: 1px solid black;
+}
+
+/* Navbar Section*/
+nav{
+    width: 100%;
+    margin-right: 120px;
+	text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+	color: grey;
+	text-decoration: none;
+}
+nav a:visited{
+	color:grey;
+}
+
+#navbar{
+    margin-top: 30px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+
+/* Banner Section*/
+#CTA{
+	border-bottom: black 1px solid;
+	margin-bottom: 30px;
+	padding-bottom: 60px;
+	text-align: center;
+}
+
+#CTA h1{
+	font-size: 5rem;
+}
+
+
+/* Footer Section*/
+footer{
+	border-top: solid black 1px;
+	margin-top: 30px;
+	margin-bottom: 60px;
+	padding-top: 30px;
+}
+
+.middle-img{
+	width: 100%;
+	margin: 30px 0px;
+}
+
+
+footer{
+	border-top: solid black 1px;
+	margin-top: 30px;
+	margin-bottom: 60px;
+	padding-top: 30px;
+}
+
+.copyright {
+	text-align: center;
+	padding-top: 30px;
+}
+
+/* Flex classes*/
+.flex{
+	flex-flow: row wrap;
+	display: flex;
+}
+.half{
+	flex-basis: 50%;
+}
+.third{
+	flex-basis: 33%;
+}
+
+/* Services CSS*/
+
+/* Font Size */
+h1{
+	font-size: 2.5rem;
+}
+h2{
+	font-size: 2rem;
+}
+
+#head{
+	margin: 30px 0px 15px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+}
+
+.serve section {
+	background-color: lightgray;
+	border: 1px solid black;
+	padding: 30px;
+}
+
+article section a {
+	text-decoration: none;
+	color: black;
+	padding: 5px 30px;
+	background-color: white;
+	border-radius: 10px;
+}
+
+.services-header-img{
+	width: 100%;
+}
+
+.serve{
+	justify-content: space-between;
+}
+.serve .half{
+	flex-basis: 45%;
+	margin-top: 50px;
+}
+
+.services-info-img{
+	height: 300px;
+	width: 100%;
+
+}
+
+/* Footer Section */
+
+footer section p {
+	text-align: left;
+}
+
+footer section ul {
+	padding-top: 20px;
+	list-style: inside;
+}
+
+/* Tablet View*/
+@media (max-width: 800px){
+    #navbar{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    nav{
+        width: 100%;
+        justify-content: space-between;
+        margin-right:0px;
+    }
+    nav a{
+        flex-basis: auto;
+    }
+    #CTA img {
+        display: none;
+    }
+    #CTA div{
+        margin: 0 auto;
+    }
+    .logo{
+        order: -1;
+        flex-grow:2;
+        margin: 30px 0;
+    }
+    body{
+        width: 95%
+    }
+    .serve{
+        flex-flow: column nowrap;
+    }
+
+}
+
+/* Phone View*/
+@media (max-width: 500px){
+    #head{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .services-header-img{
+        display: none;
+    }
+    body{
+        width: 100%
+    }
+    nav{
+        flex-flow: column wrap;
+        text-align: center;
+        width: 100%;
+    }
+    nav a{
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid black;
+    }
+    nav a:nth-child(1){
+        border-top: 1px solid black;
+    }
+    .logo{
+        margin: 15px 0;
+    }
+
+
+    article, #CTA{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #CTA{
+        margin-bottom: 30px;
+    }
+    footer {
+        width: 95%;
+        margin: 30px auto 60px;
+    }
+
+    .flex{
+        flex-flow: column nowrap;
+    }
+    .flex section{
+        margin: 15px 0;
+    }
+}
