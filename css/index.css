@@ -78,25 +78,26 @@ button{
 
 /* Navbar Section*/
 nav{
-	width: 80%;
+    width: 100%;
+    margin-right: 120px;
 	text-align: center;
-	display: flex;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav a {
-	width:20%;
 	color: grey;
 	text-decoration: none;
-	padding: 0 20px;
 }
 nav a:visited{
 	color:grey;
 }
 
 #navbar{
+    margin-top: 30px;
 	width: 100%;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	margin-bottom: 30px;
 }
@@ -218,6 +219,14 @@ footer section ul {
         flex-flow: column nowrap;
         justify-content: space-between;
     }
+    nav{
+        width: 100%;
+        justify-content: space-between;
+        margin-right:0px;
+    }
+    nav a{
+        flex-basis: auto;
+    }
     #CTA img {
         display: none;
     }
@@ -232,11 +241,21 @@ footer section ul {
     body{
         width: 95%
     }
+    .serve{
+        flex-flow: column nowrap;
+    }
 
 }
 
 /* Phone View*/
 @media (max-width: 500px){
+    #head{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .services-header-img{
+        display: none;
+    }
     body{
         width: 100%
     }
