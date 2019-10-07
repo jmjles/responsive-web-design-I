@@ -237,5 +237,43 @@ footer section ul {
 
 /* Phone View*/
 @media (max-width: 500px){
+    body{
+        width: 100%
+    }
+    nav{
+        flex-flow: column wrap;
+        text-align: center;
+        width: 100%;
+    }
+    nav a{
+        width: 100%;
+        padding: 15px 0;
+        border-bottom: 1px solid black;
+    }
+    nav a:nth-child(1){
+        border-top: 1px solid black;
+    }
+    .logo{
+        margin: 15px 0;
+    }
 
+
+    article, #CTA{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #CTA{
+        margin-bottom: 30px;
+    }
+    footer {
+        width: 95%;
+        margin: 30px auto 60px;
+    }
+
+    .flex{
+        flex-flow: column nowrap;
+    }
+    .flex section{
+        margin: 15px 0;
+    }
 }
