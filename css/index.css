@@ -214,6 +214,24 @@ footer section ul {
 
 /* Tablet View*/
 @media (max-width: 800px){
+    #navbar{
+        flex-flow: column nowrap;
+        justify-content: space-between;
+    }
+    #CTA img {
+        display: none;
+    }
+    #CTA div{
+        margin: 0 auto;
+    }
+    .logo{
+        order: -1;
+        flex-grow:2;
+        margin: 30px 0;
+    }
+    body{
+        width: 95%
+    }
 
 }
 
